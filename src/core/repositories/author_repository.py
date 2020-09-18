@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Optional
-from src.entities.author import Author
-from src.repositories.errors import EntityNotFoundError
+from src.core.entities.author import Author
+from src.core.repositories.errors import EntityNotFoundError
 
 class AuthorRepository(ABC):
   @abstractmethod

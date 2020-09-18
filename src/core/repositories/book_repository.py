@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Optional
-from src.entities.book import Book
-from src.repositories.errors import EntityNotFoundError
+from src.core.entities.book import Book
+from src.core.repositories.errors import EntityNotFoundError
 
 class BookRepository(ABC):
   @abstractmethod
@@ -19,7 +19,7 @@ class MemoryBookRepository(BookRepository):
     self.id_sequence = 1
   
   def add(self, book: Book) -> None:
-    book.uid = book.uid or ("A-" + str(self.id_sequence))
+    book.uid = book.uid or ("B-" + str(self.id_sequence))
     self.books[book.uid] = book
     self.id_sequence += 1
 

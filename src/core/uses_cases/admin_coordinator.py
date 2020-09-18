@@ -1,8 +1,8 @@
 from typing import Dict
-from src.entities.author import Author
-from src.entities.book import Book
-from src.repositories.author_repository import AuthorRepository
-from src.repositories.book_repository import BookRepository
+from src.core.entities.author import Author
+from src.core.entities.book import Book
+from src.core.repositories.author_repository import AuthorRepository
+from src.core.repositories.book_repository import BookRepository
 
 class AdminCoordinator:
   def __init__(self, book_repository: BookRepository, author_repository: AuthorRepository) -> None:
